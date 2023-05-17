@@ -4,21 +4,20 @@
   <title>Validação de Código de Acesso</title>
   <script>
     function validarCodigoAcesso(codigo) {
-      if (codigo === "1234") {
-        return true;
-      } else {
-        return false;
-      }
-    }
+  const codigoAcessoJSON = [
+    { "codigo": "1234" },
+    { "codigo": "5678" },
+    { "codigo": "9012" }
+  ];
 
-    function verificarCodigo() {
-      var codigoAcesso = document.getElementById("codigoAcesso").value;
-      if (validarCodigoAcesso(codigoAcesso)) {
-        alert("Código de acesso válido!");
-      } else {
-        alert("Código de acesso inválido!");
-      }
-    }
+  const codigoEncontrado = codigoAcessoJSON.find(item => item.codigo === codigo);
+
+  if (codigoEncontrado) {
+    return true; // Código de acesso válido
+  } else {
+    return false; // Código de acesso inválido
+  }
+}
   </script>
 </head>
 <body>
