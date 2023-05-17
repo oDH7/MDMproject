@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Monitoramento</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+        <body>
+            <div class="container">
+                <!--BANNER COM TITULO-->
+                <div class="banner">
+                    <div class="title">
+                        <h1>MONITORAMENTO</h1>
+                    </div>
+                        <div class="icon">
+                            <img class="iconimg"src="assets/icon.png">
+                        </div>
+                    </div>
+                </div>
+                <!--COLUNA LATERAL-->
+                <div class="colunalateral">
+                    <p></p>
+                    <div class="primeiroselecionavel">
+                        <div class="textcaixa" >
+                            <h2>MÁQUINAS</h2>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="segundoselecionavel">
+                        <div class="textcaixa">
+                            <a class="none_href"href="index.html"><h2>SETOR 1</h2></a>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="terceiroselecionavel">
+                        <div class="textcaixa">
+                            <h2>SETOR 2</h2>
+                        </div>
+                    </div> 
+
+                </div>
+                
+                <div class="caixaflutuante" onload="loadTxt()">
+                    <div id="title_caixa">
+                        <h1>TORNO MECÂNICO</h1>
+                    </div>
+                    <div id="caixa_manutencao">
+                        <h2>ULTIMA MANUTENÇÃO EM <input id="problemas_1" type="date"> </h2>
+                    </div>
+                    <div id="caixa_modelo">
+                        <h2>MODELO: TORNO DE BANCADA - MANROD</h2>
+                    </div>
+                    <div id="caixa_problemas">
+                        <h2><input id="problemas_2" type="number"> PROBLEMAS FORAM RELATADOS</h2>
+                    </div>
+                    <div id="caixa_fabricacao">
+                        <h2>DATA DE FABRICAÇÃO:2015</h2>
+                    </div>
+                    <div id="caixa_observacoes">
+                        <h2>OBSERVAÇÕES</h2>
+                        <textarea id="observacoes_text" class="edit-textbox"></textarea>
+                    </div>
+                    <div id="caixa_picture">
+                        <img class="img_torno" src="assets/torno.png">
+                    </div>
+                    <div class="button_div_caixa">
+                        <button type="button" onclick="saveTxt()" class="acesso_submit"><h2>MODIFICAR</h2></button>
+                    </div>
+                </div>
+                <script>
+                  document.getElementById('problemas_1').value = localStorage.getItem('observacoes');
+                  document.getElementById('problemas_2').value = localStorage.getItem('quantidade');
+                  document.getElementById('observacoes_text').value = localStorage.getItem('lista_observacoes');
+
+function saveTxt() {
+    var observacoes = document.getElementById('problemas_1').value;
+    localStorage.setItem('observacoes', observacoes);
+    var quantidade = document.getElementById('problemas_2').value;
+    localStorage.setItem('quantidade', quantidade);
+    var lista = document.getElementById('observacoes_text').value;
+    localStorage.setItem('lista_observacoes', lista);
+    alert('Observações salvas com sucesso!');
+}
+                </script>
+            
+        </body>
+</html>

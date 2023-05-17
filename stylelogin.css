@@ -1,0 +1,14 @@
+html{
+    background-color: #000000;
+    color:#ffffff;
+    text-align: center;
+}
+.info{
+    margin-top: 300px;
+    font-size: 40px;
+}
+input, button{
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+}

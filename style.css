@@ -1,24 +1,32 @@
 html{
     width: 100%;
     height: 100%;
+    border: 0px;
+    
 }
 body{
     width: 100%;
     height: 100%;
+    margin: 0px;
 }
 .banner{
     background-color: #000000;
     width: 100%;
     height: 10%;
     color:#ffffff;
-    text-align: center;
+    text-align: left;
+}
+h1{
+    font-size: 40px;
 }
 .title{
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    text-decoration: double;
 }
 .icon{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 .icon, .iconimg{
     display: inline-block;
@@ -28,7 +36,144 @@ body{
     width: 70%;
 }
 .colunalateral{
+    border-width: 50px;
+    border: #000000;
+    border-style: solid;
     background-color: #D9D9D9;
     width: 20%;
     height: 100%;
+    text-align: center;
+    margin:0px;
+    display: inline-block;
+    position:absolute;
+    border-top:0px;
+}
+
+.primeiroselecionavel{
+    border: #000000;
+    border-width: 3px;
+    border-style: solid;
+    
+}
+.segundoselecionavel{
+    border: #000000;
+    border-width: 3px;
+    border-style: solid;
+}
+.terceiroselecionavel{
+    border: #000000;
+    border-width: 3px;
+    border-style: solid;
+    
+}
+ .areademaquinas{
+    display:inline-block;
+    margin-left: 40%;
+    margin-top: 6%;
+    width: 30%;
+}
+.areademaquinas{
+    background-color: #FDFCFC;
+    text-align: center;
+    padding: 50px;
+    border: #000000;
+    border-style: solid;
+    border-width: 5px;
+    
+}
+#acesso{
+    width: 200px;
+    height: 60px;
+    background-color: #D9D9D9;
+    text-align: center;
+    cursor: pointer;
+    border-width: 2px;
+    border: #000000;
+    border-style: solid;
+}
+.maquina1 , .maquina2 , .maquina3 , .maquina4{
+    display: inline-block;
+    border-width:20px;
+    border:#FDFCFC;
+    border-style: solid;
+}
+/*segunda página*/
+.caixaflutuante{
+    text-align: center;
+    display:inline-block;
+    margin-left: 40%;
+    margin-top: 6%;
+    width: 600px;
+    background-color: #FDFCFC;
+    border-color: #000000;
+    border-width: 4px;
+    border-style: solid;
+    padding: 100px;
+}
+.img_torno{
+    rotate: 270deg;
+    height: 30%;
+    width: 30%;
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+}
+#title_caixa{
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
+
+}
+#caixa_manutencao{
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+#caixa_modelo{
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
+
+}
+#caixa_problemas{
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
+
+}
+#caixa_observacoes{
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
+
+}
+#caixa_picture{
+   
+}
+.acesso_submit{
+    width: 210px;
+    height: 70px;
+    background-color: #D9D9D9;
+    text-align: center;
+    cursor: pointer;
+    border-width: 1px;
+    border: #000000;
+    border-style: solid;
+}
+#problemas_1{
+    width: 100px;
+    height: 30px;
+}
+#problemas_2{
+    width: 40px;
+    height: 30px;
+}
+.none_href{
+    text-decoration: none;
+    color:#000000;
 }
