@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>TECH MACHINE</title>
-    <link rel="stylesheet" type="text/css" href="styleL.css">
-    <script>
-        function saveTxt() {
-            var texto = document.getElementById('texto').value;
-            localStorage.setItem('meuTexto', texto);
-        }
+  <title>Validação de Código de Acesso</title>
+  <script>
+    function validarCodigoAcesso(codigo) {
+      if (codigo === "1234") {
+        return true;
+      } else {
+        return false;
+      }
+    }
 
-        function loadTxt() {
-            var textoSalvo = localStorage.getItem('meuTexto');
-            if (textoSalvo) {
-                document.getElementById('texto').value = textoSalvo;
-            }
-        }
-    </script>
+    function verificarCodigo() {
+      var codigoAcesso = document.getElementById("codigoAcesso").value;
+      if (validarCodigoAcesso(codigoAcesso)) {
+        alert("Código de acesso válido!");
+      } else {
+        alert("Código de acesso inválido!");
+      }
+    }
+  </script>
 </head>
-
-<body onload="loadTxt()">
-    <h1>Monitoramento de máquinas</h1>
-    <h2> Máquina 1</h2>
-    <input placeholder="Período da ultima manutenção" id="texto"></input>
-    <p>
-        <input placeholder="Digite o ano" id="texto"></input>
-    <p>
-        <input placeholder="Digite o ano" id="texto"></input>
-    <p>
-        <input placeholder="Digite o ano" id="texto"></input>
-    <p>
-        <button onclick="saveTxt()">Salvar</button>
-
+<body>
+  <h1>Código de Acesso</h1>
+  <form>
+    <label for="codigoAcesso">Código de Acesso:</label>
+    <input type="password" id="codigoAcesso" name="codigoAcesso" required>
+    <br>
+    <input type="button" value="Verificar" onclick="verificarCodigo()">
+  </form>
 </body>
-
 </html>
