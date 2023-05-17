@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>TECH MACHINE</title>
+    <link rel="stylesheet" type="text/css" href="styleL.css">
+    <script>
+        function saveTxt() {
+            var texto = document.getElementById('texto').value;
+            localStorage.setItem('meuTexto', texto);
+        }
 
+        function loadTxt() {
+            var textoSalvo = localStorage.getItem('meuTexto');
+            if (textoSalvo) {
+                document.getElementById('texto').value = textoSalvo;
+            }
+        }
+    </script>
+</head>
+
+<body onload="loadTxt()">
+    <h1>Monitoramento de máquinas</h1>
+    <h2> Máquina 1</h2>
+    <input placeholder="Período da ultima manutenção" id="texto"></input>
+    <p>
+        <input placeholder="Digite o ano" id="texto"></input>
+    <p>
+        <input placeholder="Digite o ano" id="texto"></input>
+    <p>
+        <input placeholder="Digite o ano" id="texto"></input>
+    <p>
+        <button onclick="saveTxt()">Salvar</button>
+
+</body>
+
+</html>
