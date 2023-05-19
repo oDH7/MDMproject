@@ -28,7 +28,7 @@
                     <p></p>
                     <div class="segundoselecionavel">
                         <div class="textcaixa">
-                            <h2>SETOR 1</h2>
+                            <a href= "index.html" class="none_href"><h2>SETOR 1</h2></a>
                         </div>
                     </div>
                     <p></p>
@@ -41,31 +41,62 @@
                 </div>
                 
                 <div class="caixaflutuante">
+                    <p id="br_desativar"></p>
                     <div id="title_caixa">
                         <h1>INJETORA PLÁSTICA</h1>
                     </div>
                     <div id="caixa_manutencao">
-                        <h2>ULTIMA MANUTENÇÃO EM 25/05/2020</h2>
+                        <h2>ULTIMA MANUTENÇÃO EM <input id="manutencao_tri_subpage" type="date"> </h2>
                     </div>
                     <div id="caixa_modelo">
                         <h2>MODELO: INJETO HY</h2>
                     </div>
                     <div id="caixa_problemas">
-                        <h2><input type="number"> FORAM RELATADOS</h2>
+                        <h2><input id="problemas_tri_subpage" type="number"> PROBLEMAS FORAM RELATADOS</h2>
                     </div>
                     <div id="caixa_fabricacao">
                         <h2>DATA DE FABRICAÇÃO: 2001</h2>
                     </div>
                     <div id="caixa_observacoes">
-                        <h2>OBSERVAÇÕES</h2>
+                        <textarea id="observacoes_text_tri_subpage" class="edit-textbox"></textarea>
                     </div>
                     <div id="caixa_picture">
                         <img class="img_torno" src="assets/torno.png">
                     </div>
                     <div class="button_div_caixa">
-                        <button type="submit" id="acesso_submit"><h2>MODIFICAR</h2></button>
+                        <button onclick="saveTxt()" type="submit" class="acesso_submit"><h2>MODIFICAR</h2></button>
+                    </div>
+                    <div class="button_desativar_div">
+                        <button type="button" onclick="desativar()" class="red_button"><h2>DESATIVAR</h2></button>
                     </div>
                 </div>
+                <script>
+                   document.getElementById('manutencao_tri_subpage').value = localStorage.getItem('manutencao');
+                  document.getElementById('problemas_tri_subpage').value = localStorage.getItem('problemas');
+                  document.getElementById('observacoes_text_tri_subpage').value = localStorage.getItem('observacoes');
+
+function saveTxt() {
+    var manutencao = document.getElementById('manutencao_tri_subpage').value;
+    localStorage.setItem('manutencao', manutencao);
+    var problemas = document.getElementById('problemas_tri_subpage').value;
+    localStorage.setItem('problemas', problemas);
+    var observacoes = document.getElementById('observacoes_text_tri_subpage').value;
+    localStorage.setItem('observacoes', observacoes);
+    alert('Observações salvas com sucesso!');
+} 
+function desativar() {
+        var brDesativar = document.getElementById('br_desativar');
+        brDesativar.innerText = 'Desativado';
+
+        localStorage.setItem('desativado', 'true');
+    }
+
+    var isDesativado = localStorage.getItem('desativado');
+    if (isDesativado === 'true') {
+        var brDesativar = document.getElementById('br_desativar');
+        brDesativar.innerText = 'Desativado';
+    }
+                </script>
             
         </body>
 </html>

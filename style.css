@@ -152,8 +152,11 @@ h1{
     margin-bottom: 20px;
 
 }
-#caixa_picture{
-   
+#caixa_fabricacao{
+    border: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
 }
 .acesso_submit{
     width: 210px;
@@ -176,4 +179,30 @@ h1{
 .none_href{
     text-decoration: none;
     color:#000000;
+}
+#manutencao_tri_subpage{
+    width: 100px;
+    height: 30px;
+}
+#problemas_tri_subpage{
+    width: 40px;
+    height: 30px;
+}
+.button_desativar_div{
+    margin-top: 20px;
+}
+.red_button{ width: 210px;
+    height: 70px;
+    background-color: #9f0d0d;
+    text-align: center;
+    cursor: pointer;
+    border-width: 1px;
+    border: #000000;
+    border-style: solid;
+    color:#ffffff;
+}
+#br_desativar {
+    color:#9f0d0d;
+    font-size: 40px;
+    text-align: center;
 }

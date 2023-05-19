@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>Monitoramento</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        
+
         </head>
         <body>
             <div class="container">
@@ -41,6 +43,7 @@
                 </div>
                 
                 <div class="caixaflutuante" onload="loadTxt()">
+                    <p id="br_desativar"></p>
                     <div id="title_caixa">
                         <h1>TORNO MECÂNICO</h1>
                     </div>
@@ -66,22 +69,39 @@
                     <div class="button_div_caixa">
                         <button type="button" onclick="saveTxt()" class="acesso_submit"><h2>MODIFICAR</h2></button>
                     </div>
+                    <div class="button_desativar_div">
+                        <button type="button" onclick="desativar()" class="red_button"><h2>DESATIVAR</h2></button>
+                    </div>
                 </div>
                 <script>
-                  document.getElementById('problemas_1').value = localStorage.getItem('observacoes');
-                  document.getElementById('problemas_2').value = localStorage.getItem('quantidade');
-                  document.getElementById('observacoes_text').value = localStorage.getItem('lista_observacoes');
+                    document.getElementById('problemas_1').value = localStorage.getItem('observacoes_text');
+document.getElementById('problemas_2').value = localStorage.getItem('quantidade');
+document.getElementById('observacoes_text').value = localStorage.getItem('lista_observacoes');
 
 function saveTxt() {
-    var observacoes = document.getElementById('problemas_1').value;
-    localStorage.setItem('observacoes', observacoes);
-    var quantidade = document.getElementById('problemas_2').value;
-    localStorage.setItem('quantidade', quantidade);
-    var lista = document.getElementById('observacoes_text').value;
-    localStorage.setItem('lista_observacoes', lista);
-    alert('Observações salvas com sucesso!');
+var observacoes = document.getElementById('problemas_1').value;
+localStorage.setItem('observacoes_text', observacoes);
+var quantidade = document.getElementById('problemas_2').value;
+localStorage.setItem('quantidade', quantidade);
+var lista = document.getElementById('observacoes_text').value;
+localStorage.setItem('lista_observacoes', lista);
+alert('Observações salvas com sucesso!');
 }
+function desativar() {
+        var brDesativar = document.getElementById('br_desativar');
+        brDesativar.innerText = 'Desativado';
+
+        localStorage.setItem('desativado', 'true');
+    }
+
+    var isDesativado = localStorage.getItem('desativado');
+    if (isDesativado === 'true') {
+        var brDesativar = document.getElementById('br_desativar');
+        brDesativar.innerText = 'Desativado';
+    }
+
                 </script>
+                
             
         </body>
 </html>
