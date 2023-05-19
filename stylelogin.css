@@ -7,8 +7,14 @@ html{
     margin-top: 300px;
     font-size: 40px;
 }
-input, button{
+input, button, #senha{
     height: 50px;
     width: 300px;
     font-size: 30px;
+}
+#senha, button{
+    border: #ffffff;
+    border-width: 4px;
+    border-style: solid;
+    border-radius:4px;
 }
